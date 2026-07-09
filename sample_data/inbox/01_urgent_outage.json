@@ -1,0 +1,2 @@
+{"id": "e001", "sender": "sarah.chen@acmecorp.com", "subject": "URGENT: Production API is down, customers affected!",
+ "body": "Hi team, our production API has been returning 500 errors for the last 20 minutes and customers are complaining. This is critical and impacting live transactions. Please investigate ASAP and let us know the ETA for a fix."}

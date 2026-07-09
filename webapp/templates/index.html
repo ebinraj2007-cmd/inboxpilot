@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InboxPilot — AI Triage Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">◈</span>
+    <div>
+      <h1>InboxPilot</h1>
+      <p class="tagline">AI Email Triage &amp; Auto-Response Console</p>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <button id="runBtn" class="btn btn-primary">Run Triage</button>
+    <button id="clearBtn" class="btn btn-ghost">Clear Queue</button>
+  </div>
+</header>
+
+<section class="stats-strip" id="statsStrip">
+  <div class="stat-pill" data-cat="total">
+    <span class="stat-count" id="statTotal">0</span>
+    <span class="stat-label">Processed</span>
+  </div>
+  <div class="stat-pill" data-cat="urgent_support">
+    <span class="stat-count" id="statUrgent">0</span>
+    <span class="stat-label">Urgent Support</span>
+  </div>
+  <div class="stat-pill" data-cat="sales_lead">
+    <span class="stat-count" id="statSales">0</span>
+    <span class="stat-label">Sales Leads</span>
+  </div>
+  <div class="stat-pill" data-cat="general">
+    <span class="stat-count" id="statGeneral">0</span>
+    <span class="stat-label">General</span>
+  </div>
+  <div class="stat-pill" data-cat="spam">
+    <span class="stat-count" id="statSpam">0</span>
+    <span class="stat-label">Spam</span>
+  </div>
+  <div class="stat-pill" data-cat="newsletter">
+    <span class="stat-count" id="statNewsletter">0</span>
+    <span class="stat-label">Newsletter</span>
+  </div>
+</section>
+
+<main class="tray" id="tray">
+  <div class="empty-state" id="emptyState">
+    <p>The queue is empty.</p>
+    <p class="empty-sub">Click <strong>Run Triage</strong> to process the sample inbox.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>InboxPilot v1.0 — hybrid rule engine + optional Claude API classification</span>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
